@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="intro">
+            <p>Hello world</p>
+        </div>
+        <table id="pTable"></table>
+        <div id="demo"></div>
+        <button id="myNone">Click me</button>
+    </body>
+</html>
+
+
+
+<script>
+    var intro = document.getElementsById('footer'); //select the element using javascript
+    var newNode = document.createElement('p'); // create a P tag using javascript
+    intro.appendChild(newNode) // insert a new html element using Javascript
+    
+    //First way
+    var textNode = document.createTextNode('hello world'); //create a new text using javascript
+    newNode.appendChild(textNode);
+    //Second way
+    newNode.innerHTML = '<div>Hello!</div>'
+
+    var productTable = document.createElement('table'); //Create a table using Javascript
+    productTable.setAttribute('id', 'pTable'); //seting the atribute using Javascript
+
+    var myNode = document.getElementById('myNode'); //select the element
+
+    myNode.addEventListener('click', (elem) => { // add new event listener to the element
+        newNode.innerHTML = '<div>Thank you for clicked!</div>' // execute the function
+    })
+
+    alert("Hello! I am an alert box!!"); // open the window pop up
+
+    var name = prompt("Please enter your name")
+
+    document.getElementById("demo").innerHTML =
+    "Hello " + name + "! How are you today?";
+</script>
